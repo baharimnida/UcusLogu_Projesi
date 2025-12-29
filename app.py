@@ -12,12 +12,9 @@ def get_flight(team_id):
     all_time_steps = load_data()
     team_route = []
 
-    # JSON içindeki her bir zaman dilimini geziyoruz
     for time_step in all_time_steps:
-        # Her dilimin içindeki 'konumBilgileri' listesine bakıyoruz
         for entry in time_step.get("konumBilgileri", []):
             if entry["takim_numarasi"] == team_id:
-                # Koordinatları standart isimlere (lat, lon, alt) çevirerek listeye ekliyoruz
                 team_route.append({
                     "lat": entry["iha_enlem"],
                     "lon": entry["iha_boylam"],
