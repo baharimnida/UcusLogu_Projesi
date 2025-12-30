@@ -61,7 +61,7 @@ class UcusUygulamasi(QMainWindow):
 
         self.canvas.axes.cla()
   
-        self.canvas.axes.plot(lons, lats, alts, marker='o', markersize=4, color='darkblue', linestyle='--')
+        self.canvas.axes.plot(lats, lons, alts, marker='o', markersize=4, color='darkblue', linestyle='--')
         
         self.canvas.axes.xaxis.get_major_formatter().set_useOffset(False)
         self.canvas.axes.yaxis.get_major_formatter().set_useOffset(False)
@@ -73,7 +73,7 @@ class UcusUygulamasi(QMainWindow):
         for label in self.canvas.axes.get_yticklabels():
             label.set_rotation(-15) 
         
-        self.canvas.axes.set_xlabel('Boylam', labelpad=40, fontweight='bold', color='darkred') 
+        self.canvas.axes.set_xlabel('Enlem', labelpad=40, fontweight='bold', color='darkred') 
         self.canvas.axes.set_ylabel('Enlem', labelpad=25, fontweight='bold')
         self.canvas.axes.set_zlabel('İrtifa', labelpad=15, fontweight='bold')
         
